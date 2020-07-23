@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "974618831263",
+    "firebase_url": "https://game-life-5cfa9.firebaseio.com",
+    "project_id": "game-life-5cfa9",
+    "storage_bucket": "game-life-5cfa9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974618831263:android:29fad61738bd3c7c4775aa",
+        "android_client_info": {
+          "package_name": "com.apps.gamelife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974618831263-5bvvff0ovlo2e115lbr3tdl9uefg4nit.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apps.gamelife",
+            "certificate_hash": "e7c6632367419bb1e61814ade54aee8a25e97ae1"
+          }
+        },
+        {
+          "client_id": "974618831263-8ju8aubsij7uuqpmb48cl0pie0gs21pd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3tgUStKYgZV7DWgEL_6JRI6kug-Nh2LE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974618831263-8ju8aubsij7uuqpmb48cl0pie0gs21pd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
