@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int SPLASH_SCREEN = 5000;
+    private static int SPLASH_SCREEN = 3000;
 
     //variable
     Animation topAnim, bottomAnim;
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, Login.class);
+                Intent intent = new Intent(MainActivity.this, onboard.class);
 
                 Pair[] pairs = new Pair[2];
                 pairs[0] = new Pair<View, String>(image, "logo_image");

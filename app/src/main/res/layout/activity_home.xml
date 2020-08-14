@@ -1,30 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home"
-    android:background="@color/yell">
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="home"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"
-        android:textColor="@color/black"/>
+    <RelativeLayout
+        android:id="@+id/up"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/yell"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/insideup"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/darkgrey">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerVertical="true"
+            android:transitionName="logo_image"
+            android:src="@drawable/logo2"/>
+        <RelativeLayout
+            android:layout_toRightOf="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textt"
+            android:text="WELLCOME"
+            android:transitionName="logo_text"
+            android:textSize="40sp"
+            android:layout_marginTop="-10dp"
+            android:fontFamily="@font/bungee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Game App!"
+                android:layout_marginTop="-30dp"
+                android:layout_below="@+id/textt"
+                android:transitionName="logo_desc"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/bangers"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrol"
+        android:layout_below="@+id/up"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/mid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_margin="10dp"
+                android:background="@color/grey">
+
+                <RelativeLayout
+                    android:id="@+id/featured_background"
+                    android:layout_width="170dp"
+                    android:layout_height="280dp"
+                    android:background="@color/black"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textgame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/game_life"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/bungee"
+                        android:textSize="50sp"
+                        android:layout_marginTop="20dp"
+                        android:textAllCaps="true"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_below="@+id/textgame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Choose One To See About That Game"/>
+
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_margin="10dp"
+                    android:id="@+id/myrecycleview0"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_toRightOf="@+id/featured_background"
+                    android:background="@color/black">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/mid"
+                android:id="@+id/game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_margin="10dp">
+
+            <LinearLayout
+                android:id="@+id/bottom_mid"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/yell"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bungee"
+                        android:text="@string/game_list"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:onClick="menu"
+                        android:layout_centerVertical="true"
+                        android:text="@string/view_all"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/myrecycleview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="5dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/mid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:id="@+id/bottom_midd"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/yell"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bungee"
+                            android:text="@string/galeri_list"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:onClick="galeri"
+                            android:layout_centerVertical="true"
+                            android:text="View All"
+                            android:textColor="@color/black" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/myrecycleview4"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_navigation"
-        app:itemBackground="@color/grey"
+        app:itemBackground="@color/black"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu_navigation"
         android:layout_alignParentBottom="true"/>
 
+    </RelativeLayout>
 
-</RelativeLayout>
+
+</LinearLayout>

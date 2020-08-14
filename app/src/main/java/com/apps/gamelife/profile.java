@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -13,24 +16,23 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class profile extends AppCompatActivity {
 
-    TextInputLayout fullname, email, phoneNo, password;
-    TextView fullNameLabel, usernameLabel;
+    RelativeLayout upper, link;
+    Animation topAnim, bottomAnim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        //hooks
-        fullname = findViewById(R.id.full_name_profile);
-        email = findViewById(R.id.email_profile);
-        phoneNo = findViewById(R.id.phone_no_profile);
-        password = findViewById(R.id.password_profile);
-        fullNameLabel = findViewById(R.id.fullname_field);
-        usernameLabel = findViewById(R.id.username_field);
+        topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
+        bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
 
-        //Show All Data
-        showAllUserData();
+        upper = findViewById(R.id.upper);
+        link = findViewById(R.id.link);
+        upper.setAnimation(topAnim);
+        link.setAnimation(bottomAnim);
+
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -58,22 +60,5 @@ public class profile extends AppCompatActivity {
         });
     }
 
-    private void showAllUserData() {
 
-        Intent intent = getIntent();
-        String user_username = intent.getStringExtra("username");
-        String user_name = intent.getStringExtra("name");
-        String user_email = intent.getStringExtra("email");
-        String user_phoneNo = intent.getStringExtra("phoneNo");
-        String user_password = intent.getStringExtra("password");
-
-        fullNameLabel.setText(user_name);
-        usernameLabel.setText(user_username);
-        fullname.getEditText().setText(user_name);
-        email.getEditText().setText(user_email);
-        phoneNo.getEditText().setText(user_phoneNo);
-        password.getEditText().setText(user_password);
-
-
-    }
 }

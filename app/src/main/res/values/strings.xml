@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">GAME LIFE</string>
+    <string name="descme">
+Thank you for downloading this application, all the content contained in this application is made with search results from google,
+        if you want to find more, please contact me at the link below
+    </string>
+    <string name="game_menu">GAME MENU</string>
+    <string name="judul">judul</string>
+    <string name="deskripsi">deskripsi</string>
+    <string name="galeri_menu">GALERI MENU</string>
+    <string name="game_life">GAME life</string>
+    <string name="game_list">GAME LIST</string>
+    <string name="view_all">View All</string>
+    <string name="galeri_list">GALERI LIST</string>
+    <string name="about_game_apps">About Game Apps</string>
+    <string name="get_started">GET STARTED</string>
 </resources>

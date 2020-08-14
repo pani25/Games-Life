@@ -3,8 +3,8 @@
 
     <item
         android:id="@+id/categori"
-        android:title="Categori"
-        android:icon="@drawable/ic_apps"/>
+        android:title="Game"
+        android:icon="@drawable/ic_game"/>
 
     <item
         android:id="@+id/home1"
@@ -13,7 +13,7 @@
 
     <item
         android:id="@+id/profile"
-        android:title="Profile"
-        android:icon="@drawable/ic_profile"/>
+        android:title="About"
+        android:icon="@drawable/ic_about"/>
 
 </menu>
